@@ -1,0 +1,40 @@
+# Open and read a text file
+with open("Demo.txt", "r") as file:
+    content = file.read()
+    print(content)
+
+#2. Write a program to write text to .txt file using InputStream
+with open("Demo.txt", "w") as file:
+    file.write("Hello, this is a sample text written to the file.")
+   
+#3. Write a program to read a file stream
+with open("Demo.txt", "r") as file:
+   for line in file:
+      print(line.strip())
+
+
+        
+#4. Write a program to read a file stream supports random access
+with open("Demo.txt", "rb") as file:
+    data = file.read(10)  
+    print(data)
+    
+#5. Write a program to read a file a just to a particular index using seek()
+with open("Demo.txt", "r") as file:
+    file.seek(5)  
+    print(file.read(10))  
+    
+#6. Write a program to check whether a file is having read access and write access permissions
+import os
+
+file1 = "Demo.txt"
+if os.access(file1, os.R_OK):
+    print("File has read access")
+else:
+    print("File does not have read access")
+
+if os.access(file1, os.W_OK):
+    print("File has write access")
+else:
+    print("File does not have write access")
+
