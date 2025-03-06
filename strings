@@ -1,0 +1,72 @@
+# 1. Different ways to create a string
+string1 = "Hello"
+string2 = 'vijaya'
+string3 = str("How are you")
+print(string1, string2, string3)
+
+
+# 2. Concatenating two strings using + operator
+str4 = (string1+ " " +string2)
+print(str4)
+
+
+# 3. Finding the length of the string
+str1="Vamsi"
+print(len(str1))
+
+# 4. Extract a string using Substring
+substring = str1[0:3]
+print(substring)
+
+# 5. Searching in strings using index()
+index = str4.index("vijaya")
+print(index)
+
+
+#6.Matching a String Against a Regular Expression With matches
+A= "Aditya degree college for women Kakinada"
+if "college" in A:
+    print("Match found")
+else:
+    print("Match is not found")
+
+    
+
+# 7. Comparing strings
+string_a = "apple"
+string_b = "banana"
+print(string_a == string_b) 
+print(string_a < string_b)
+
+
+# 8. startsWith(), endsWith() and compareTo()
+
+string5="Vijaya Durga Kotipalli"
+print(string5.startswith("Durga"))
+print(string5.endswith("Kotipalli"))
+print(string5 == string3)
+
+# 9. Trimming strings with strip()
+trimmed_string = "   Aditya Institutions  ".strip()
+print(trimmed_string)
+
+# 10. Replacing characters in strings with replace()
+replaced_string = str4.replace("Hello", "Hi")
+print(replaced_string)
+
+# 11. Splitting strings with split()
+split_strings = str4.split()
+print(split_strings)
+
+
+#12.Converting integer objects to Strings python
+num = 123
+string_num = str(num)
+print(string_num)  
+print(type(string_num))
+
+#13.Converting to uppercase and lowercase
+text = "HELLO WORLD"
+low_text = text.lower()
+print(low_text)
+
