@@ -1,0 +1,42 @@
+#1. Write two methods with the same name but different number of parameters of same type and call the methods  
+class Example:
+    def show(self, *args):  
+        if len(args) == 1:
+            print(f"Method with 1 parameter: {args[0]}")
+        elif len(args) == 2:
+            print(f"Method with 2 parameters: {args[0]}, {args[1]}")
+        else:
+            print("Invalid number of arguments")
+obj = Example()
+obj.show(90)         
+obj.show(1, 2)     
+
+
+
+
+#2. Write two methods with the same name but different number of parameters of different data type and call the methods  
+class Example:
+    def show(self, a, b=None):  
+        if b is None:
+            print(f"Single parameter: {a}")
+        elif isinstance(b, int):  
+            print(f"Two integer parameters: {a}, {b}")
+        elif isinstance(b, str):  
+            print(f"Integer and string parameters: {a}, '{b}'")
+obj = Example()
+obj.show(13)         
+obj.show(49, "Vijaya")     
+obj.show(9, 56)  
+
+
+
+
+
+#3. Write two methods with the same name and same number of parameters of same type
+class Example:
+    def show(self, a, b):
+        print(f"First definition: {a}, {b}")
+    def show(self, x, y):
+        print(f"Second definition (overwritten previous one): {x}, {y}")
+obj = Example()
+obj.show(10, 21)  
