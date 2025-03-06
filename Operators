@@ -1,0 +1,54 @@
+#Write a function for arithmetic operators(+,-,*,/)
+a=20
+b=30
+print(a+b)
+print(a-b)
+print(a*b)
+print(a/b)
+
+
+#Write a method for increment and decrement operators(++, --)
+D=2
+c=3
+c+=10
+D-=5
+print(c,D)
+
+#write a program to find the two numbers equal or not.
+
+a=4
+b=7
+print(a==b)
+
+# 2.
+a=5
+b=5
+if a==b:
+    print("Both are equal")
+else:
+    print("BOth are not equal")
+
+#Program for relational operators (<,<==, >, >==)
+
+X=22
+Y=33
+print(X<Y)
+print(X<=Y)
+print(X>Y)
+print(X>=Y)
+print(X==Y)
+print(X!=Y)
+
+
+#Print the smaller and larger number
+
+Z= int(input())
+W= int(input())
+if Z>W:
+    print(Z, "is greater")
+else:
+    print(W, "is greater")
+if Z<W:
+    print(Z, " is smaller")
+else:
+    print(W, "is smaller")
