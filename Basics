@@ -1,0 +1,27 @@
+#1. Write a program to print your name.
+print("Vijaya")
+
+
+#2. Write a program for a Single line comment and multi-line comments
+print("Single line comments")
+print("Multi line comments")
+
+
+#3.Define variables for different Data Types int, Boolean, char, float, double and print on the console.
+integer_var=4
+float_var=23.7
+double_var=78.6543
+boolean_var="True"
+Char_var="B"
+type(integer_var)
+
+
+
+"""4.Define the local and Global variables with the same name and print both variables and
+understand the scope of the variable"""
+x=10
+def function():
+    x=20
+    print("inside function",x)
+function()
+print("Outside function",x)
