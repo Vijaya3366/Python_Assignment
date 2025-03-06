@@ -1,0 +1,190 @@
+# 1.creating classes A, B and C
+class A:
+    msg = "Class A"
+
+class B:
+    msg= "Class B"
+
+class C:
+    msg = "Class C"
+
+print(A.msg)
+print(B.msg)
+print(C.msg)
+
+
+
+#2.A is a super class. B is a sub class of A. C is a sub class of B.
+
+class A: 
+    msgA = "Class A"
+
+class B(A):  
+    msgB = "Class B"
+
+class C(B): 
+    msgC = "Class C"
+
+obj = C()
+
+
+print(obj.msgA)  
+print(obj.msgB)  
+print(obj.msgC)
+
+
+
+""""3.Create three methods in each class, 2 methods are specific to each class and third
+method (override method) should be in all three Classes A, B and C"""
+class A: 
+    def method1(self):
+        print("Method 1 of A")
+    
+    def method2(self):
+        print("Method 2 of A")
+    
+    def common_method(self): 
+        print("Common method in A")
+
+class B(A): 
+    def method3(self):
+        print("Method 1 of B")
+    
+    def method4(self):
+        print("Method 2 of B")
+    
+    def common_method(self):  
+        print("Common method in B")
+
+class C(B): 
+    def method5(self):
+        print("Method 1 of C")
+    
+    def method6(self):
+        print("Method 2 of C")
+    
+    def common_method(self): 
+        print("Common method in C")
+
+objA = A()
+objB = B()
+objC = C()
+
+objA.method1()
+objA.method2()
+objA.common_method()
+
+objB.method3()
+objB.method4()
+objB.common_method()
+
+objC.method5()
+objC.method6()
+objC.common_method()
+
+
+
+
+"""4.Create a class with main method. Create an object for each class A, B and C in main
+method and call every method of each class using its own object/instanc"""
+
+class A:  
+    def method1(self):
+        print("Method 1 of Class A")
+    
+    def method2(self):
+        print("Method 2 of Class A")
+    
+    def common_method(self):  
+        print("Common method in Class A")
+
+class B(A):  
+    def method3(self):
+        print("Method 3 of Class B")
+    
+    def method4(self):
+        print("Method 4 of Class B")
+    
+    def common_method(self): 
+        print("Common method in Class B")
+
+class C(B):  
+    def method5(self):
+        print("Method 5 of Class C")
+    
+    def method6(self):
+        print("Method 6 of Class C")
+    
+    def common_method(self):  
+        print("Common method in Class C")
+
+if __name__ == "__main__":
+  
+    objA = A()
+    objB = B()
+    objC = C()
+
+    print("\nCalling methods of Class A:")
+    objA.method1()
+    objA.method2()
+    objA.common_method()
+
+    print("\nCalling methods of Class B:")
+    objB.method1() 
+    objB.method2()
+    objB.method3()
+    objB.method4()
+    objB.common_method()
+
+    print("\nCalling methods of Class C:")
+    objC.method1()  
+    objC.method2()  
+    objC.method3()  
+    objC.method4()  
+    objC.method5()
+    objC.method6()
+    objC.common_method()
+
+
+#5.Call an overridden method with super class reference to B and C class’s object
+    
+class A:
+    def show(self):
+        print("Class A")
+
+class B(A):
+    def show(self):
+        print("Class B")
+
+class C(A):
+    def show(self):
+        print("Class C")
+
+obj1: A = B()
+obj2: A = C()
+
+obj1.show()  
+obj2.show()
+
+"""6.Runtime Polymorphism with Data Members/Instance variables, Repeat the above
+process only for data members"""
+class A:
+    def __init__(self):
+        self.var = "Class A"
+
+class B(A):
+    def __init__(self):
+        super().__init__()  
+        self.var = "Class B" 
+
+class C(A):
+    def __init__(self):
+        super().__init__()
+        self.var = "Class C"
+
+obj1: A = B()
+obj2: A = C()
+
+print(obj1.var)  
+print(obj2.var) 
+
